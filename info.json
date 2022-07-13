@@ -1,0 +1,25 @@
+{
+    "name": "bzgas",
+    "version": "0.0.1",
+    "factorio_version": "1.1",
+    "title": "Natural Gas",
+    "author": "Brevven",
+    "contact": "",
+    "homepage": "",
+    "dependencies": [
+      "base >= 1.1.0",
+      "? bzfoundry >= 0.2.1",
+      "? bztitanium >= 1.2.0",
+      "? bzlead >= 1.2.0",
+      "? bzzirconium >= 0.6.0",
+      "? bztungsten >= 0.6.0",
+      "? bzcarbon >= 0.3.0",
+      "? space-exploration >= 0.5.100",
+      "? aai-industry",
+      "? Krastorio2",
+      "? deadlock-beltboxes-loaders",
+      "? DeadlockCrating"
+    ],
+    "description": "(alpha version) Adds a natural gas resource, along with early game plastic.\nIntegrates ElAdamo's gas-fired boiler.\n\nCompatible with Krastorio 2 and Space Exploration. A standalone piece of BZ Mods."
+}
+
