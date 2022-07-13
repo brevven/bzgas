@@ -2,7 +2,9 @@ local resource_autoplace = require('resource-autoplace');
 local noise = require('noise');
 
 local util = require("data-util");
+local futil = require("util")
 
+data:extend({ {type = "resource-category", name="gas"} })
 data:extend({
 	{
     type = "autoplace-control",
@@ -21,7 +23,7 @@ data:extend({
     icon = "__base__/graphics/icons/crude-oil-resource.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-neutral"},
-    category = "basic-fluid",
+    category = "gas",
     subgroup = "raw-resource",
     order="a-b-a",
     infinite = true,
@@ -46,7 +48,7 @@ data:extend({
         }
       }
     },
-    walking_sound = sounds.oil,
+    -- walking_sound = sounds.oil,
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     autoplace = resource_autoplace.resource_autoplace_settings
@@ -73,7 +75,7 @@ data:extend({
         height = 60,
         frame_count = 4,
         variation_count = 1,
-        shift = util.by_pixel(0, -2),
+        shift = futil.by_pixel(0, -2),
         hr_version =
         {
           filename = "__base__/graphics/entity/crude-oil/hr-crude-oil.png",
@@ -82,7 +84,7 @@ data:extend({
           height = 120,
           frame_count = 4,
           variation_count = 1,
-          shift = util.by_pixel(0, -2),
+          shift = futil.by_pixel(0, -2),
           scale = 0.5
         }
       }
