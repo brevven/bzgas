@@ -1,0 +1,55 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2020-11-15
+
+  Changes:
+    - Incremented to version 1.0.
+
+  Entities:
+    - Reduced fuel input fluid box to height 1.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2020-02-03
+
+  Changes:
+    - Incremented to version 18.
+    - Copied old assembler 1 graphics from 0.17
+      because they match the boiler's color.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2019-11-26
+
+  Locale:
+    - Added Russian translations provided by Va7ya.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2019-09-30
+
+  Graphics:
+    - Increased secondary draw orders on south-
+      facing fuel connection picture so it will
+      cover the working_light picture. I plan
+      to make a new working_light picture in 
+      the long run.
+
+  Fixes:
+    - Fixed changelog.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2019-09-05
+
+  Fixes:
+    - Fixed version number.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2019-09-05
+
+  Prototypes:
+    - Created new gas-boiler prototype to replace
+      multiple fluid-powered boiler entities in my
+      other mods.

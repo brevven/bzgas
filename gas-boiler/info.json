@@ -1,0 +1,11 @@
+{
+        "name": "gas-boiler",
+        "version": "0.1.0",
+        "title": "Gas-fired boiler",
+        "author": "adamo",
+        "dependencies": [
+                "base"
+        ],
+        "description": "Fluid mechanics need not apply.",
+        "factorio_version": "1.0"
+}

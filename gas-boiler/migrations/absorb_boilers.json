@@ -1,0 +1,18 @@
+{
+    "item":
+    [
+        ["adamo-carbon-gas-fired-boiler","gas-boiler"],
+        ["adamo-cinefaction-gas-fired-boiler","gas-boiler"]
+    ],
+	"entity":
+    [
+        ["adamo-carbon-gas-fired-boiler","gas-boiler"],
+        ["adamo-cinefaction-gas-fired-boiler","gas-boiler"]
+    ],
+    "recipe":
+    [
+        ["adamo-carbon-gas-fired-boiler","gas-boiler"],
+        ["adamo-cinefaction-gas-fired-boiler","gas-boiler"]
+    ]
+}
+
