@@ -51,6 +51,8 @@ data:extend({
     -- walking_sound = sounds.oil,
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    map_color = {0.9, 0.7, 0.2},
+    map_grid = false,
     autoplace = resource_autoplace.resource_autoplace_settings
     {
       name = "gas",
@@ -69,28 +71,57 @@ data:extend({
     {
       sheet =
       {
-        filename = "__base__/graphics/entity/crude-oil/crude-oil.png",
+        filename = "__bzgas__/graphics/entity/ores/gas.png",
         priority = "extra-high",
-        width = 74,
-        height = 60,
+        width = 64,
+        height = 64,
         frame_count = 4,
         variation_count = 1,
-        shift = futil.by_pixel(0, -2),
+        shift = futil.by_pixel(0, -12),
         hr_version =
         {
-          filename = "__base__/graphics/entity/crude-oil/hr-crude-oil.png",
+          filename = "__bzgas__/graphics/entity/ores/hr-gas.png",
           priority = "extra-high",
-          width = 148,
-          height = 120,
+          width = 128,
+          height = 128,
           frame_count = 4,
           variation_count = 1,
-          shift = futil.by_pixel(0, -2),
-          scale = 0.5
+          shift = futil.by_pixel(0, -12),
+          scale = 0.5,
         }
       }
     },
-    map_color = {0.67, 0.87, 0.77},
-    map_grid = false
+    stages_effect =
+    {
+      sheet =
+      {
+        filename = "__bzgas__/graphics/entity/ores/gas-effect.png",
+        priority = "extra-high",
+        width = 64,
+        height = 64,
+        frame_count = 4,
+        variation_count = 1,
+        shift = futil.by_pixel(0, -12),
+        blend_mode = "normal",
+        hr_version =
+        {
+          filename = "__bzgas__/graphics/entity/ores/hr-gas-effect.png",
+          priority = "extra-high",
+          width = 128,
+          height = 128,
+          frame_count = 4,
+          variation_count = 1,
+          shift = futil.by_pixel(0, -17),
+          scale = 0.5,
+          blend_mode = "normal",
+        }
+      }
+    },
+    effect_animation_period = 3.5,
+    effect_animation_period_deviation = 1.5,
+    effect_darkness_multiplier = 3.6,
+    min_effect_alpha = 0.1,
+    max_effect_alpha = 0.9,
   },
   {
     type = "fluid",
@@ -100,8 +131,8 @@ data:extend({
     fuel_value = "1KJ",
     base_color = {r=0.67, g=0.87, b=0.77},
     flow_color = {r=0.67, g=0.87, b=0.87},
-    icon = "__base__/graphics/icons/crude-oil-resource.png",
-    icon_size = 64,
+    icon =  "__bzgas__/graphics/icons/gas.png",
+    icon_size = 128,
     order = "a[fluid]-f[organotins]"
   },
 })
