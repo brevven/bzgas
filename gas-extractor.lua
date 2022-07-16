@@ -1,25 +1,61 @@
 local util = require("data-util");
 local futil = require("util")
 
+local ge_ingredients = {
+  {"iron-plate", 10},
+  {"pipe", 10},
+  {"stone-brick", 4},
+}
+local ge_prereq = {"automation"}
+if mods.bzlead then table.insert(ge_ingredients, {"lead-plate", 4}) end
+if mods.Krastorio2 or mods["aai-industry"] then
+  table.insert(ge_ingredients, {"sand", 10})
+  ge_prereq = {"sand"}
+elseif data.raw.item["silica"] and data.raw.technology["silica-processing"] then
+  table.insert(ge_ingredients, {"silica", 20})
+  ge_prereq = {"silica-processing"}
+end
 
 data:extend({
   {
     type = "item",
     name = "gas-extractor",
-    icon = "__base__/graphics/icons/pumpjack.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__bzgas__/graphics/icons/gas-extractor.png",
+    icon_size = 128,
     subgroup = "extraction-machine",
-    order = "b[fluids]-b[pumpjack]",
+    order = "b[fluids]-b[gas-extractor]",
     place_result = "gas-extractor",
     stack_size = 20,
   },
   {
+    type = "recipe",
+    name = "gas-extractor",
+    result = "gas-extractor",
+    enabled = false, -- TODO change
+    ingredients = ge_ingredients,
+  },
+  {
+    type = "technology",
+    name = "gas-processing",
+    icon = "__bzgas__/graphics/technology/gas-processing.png",
+    icon_size = 256,
+    prerequisites = ge_prereq,
+    effects = {
+      {type = "unlock-recipe", recipe = "gas-extractor"},
+    },
+    unit = {
+      count = 10,
+      ingredients = {{"automation-science-pack", 1}},
+      time = 20,
+    },
+  },
+  {
     type = "mining-drill",
     name = "gas-extractor",
-    icon = "__base__/graphics/icons/pumpjack.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__bzgas__/graphics/icons/gas-extractor.png",
+    icon_size = 128,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "pumpjack"},
+    minable = {mining_time = 0.5, result = "gas-extractor"},
     resource_categories = {"gas"},
     max_health = 200,
     corpse = "pumpjack-remnants",
@@ -42,7 +78,7 @@ data:extend({
       pipe_connections =
       {
         {
-          positions = { {1, -2}, {2, -1}, {-1, 2}, {-2, 1} }
+          positions = { {0, -2}, {2, 0}, {0, 2}, {-2, 0} }
         }
       }
     },
@@ -62,122 +98,52 @@ data:extend({
     },
     monitor_visualization_tint = {r=78, g=173, b=255},
     base_render_layer = "lower-object-above-shadow",
-    base_picture =
-    {
-      sheets =
-      {
-        {
-          filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
-          priority = "extra-high",
-          width = 131,
-          height = 137,
-          shift = futil.by_pixel(-2.5, -4.5),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/pumpjack/hr-pumpjack-base.png",
-            priority = "extra-high",
-            width = 261,
-            height = 273,
-            shift = futil.by_pixel(-2.25, -4.75),
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/pumpjack/pumpjack-base-shadow.png",
-          priority = "extra-high",
-          width = 110,
-          height = 111,
-          draw_as_shadow = true,
-          shift = futil.by_pixel(6, 0.5),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/pumpjack/hr-pumpjack-base-shadow.png",
-            width = 220,
-            height = 220,
-            scale = 0.5,
-            draw_as_shadow = true,
-            shift = futil.by_pixel(6, 0.5)
-          }
-        }
-      }
+    base_picture = {
+      north = {
+        filename = "__bzgas__/graphics/entity/gas-extractor-base-n.png",
+        priority = "extra-high",
+        width = 175,
+        height = 179,
+        scale = 0.5,
+        shift = futil.by_pixel(0, -4),
+      },
+      south = {
+        filename = "__bzgas__/graphics/entity/gas-extractor-base-s.png",
+        priority = "extra-high",
+        width = 175,
+        height = 149,
+        scale = 0.5,
+        shift = futil.by_pixel(0, 13),
+      },
+      east = {
+        filename = "__bzgas__/graphics/entity/gas-extractor-base-e.png",
+        priority = "extra-high",
+        width = 207,
+        height = 129,
+        scale = 0.5,
+        shift = futil.by_pixel(8, 8),
+      },
+      west = {
+        filename = "__bzgas__/graphics/entity/gas-extractor-base-w.png",
+        priority = "extra-high",
+        width = 207,
+        height = 129,
+        scale = 0.5,
+        shift = futil.by_pixel(-8, 8),
+      },
     },
     animations = {
       layers = {
         {
           filename = "__bzgas__/graphics/entity/gas-extractor.png",
           priority = "extra-high",
-          width = 176,
-          height = 400,
-          scale = 0.5,
+          width = 263,
+          height = 600,
+          scale = 1/3,
           shift = futil.by_pixel(0, -60),
-          -- scale = 0.5,
-          -- hr_version =
-          -- {
-          --   filename = "__bzgas__/graphics/entity/gas-extractor.png",
-          --   priority = "extra-high",
-          --   width = 176,
-          --   height = 400,
-          --   -- shift = futil.by_pixel(-2.25, -4.75),
-          --   scale = 0.5,
-          -- }
         },
       },
     },
-    -- animations =
-    -- {
-    --   north =
-    --   {
-    --     layers =
-    --     {
-    --       {
-    --         priority = "high",
-    --         filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
-    --         line_length = 8,
-    --         width = 104,
-    --         height = 102,
-    --         frame_count = 40,
-    --         shift = futil.by_pixel(-4, -24),
-    --         animation_speed = 0.5,
-    --         hr_version =
-    --         {
-    --           priority = "high",
-    --           filename = "__base__/graphics/entity/pumpjack/hr-pumpjack-horsehead.png",
-    --           animation_speed = 0.5,
-    --           scale = 0.5,
-    --           line_length = 8,
-    --           width = 206,
-    --           height = 202,
-    --           frame_count = 40,
-    --           shift = futil.by_pixel(-4, -24)
-    --         }
-    --       },
-    --       {
-    --         priority = "high",
-    --         filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
-    --         animation_speed = 0.5,
-    --         draw_as_shadow = true,
-    --         line_length = 8,
-    --         width = 155,
-    --         height = 41,
-    --         frame_count = 40,
-    --         shift = futil.by_pixel(17.5, 14.5),
-    --         hr_version =
-    --         {
-    --           priority = "high",
-    --           filename = "__base__/graphics/entity/pumpjack/hr-pumpjack-horsehead-shadow.png",
-    --           animation_speed = 0.5,
-    --           draw_as_shadow = true,
-    --           line_length = 8,
-    --           width = 309,
-    --           height = 82,
-    --           frame_count = 40,
-    --           scale = 0.5,
-    --           shift = futil.by_pixel(17.75, 14.5)
-    --         }
-    --       }
-    --     }
-    --   }
-    -- },
     vehicle_impact_sound = data.raw["mining-drill"]["pumpjack"].vehicle_impact_sound,
     open_sound = data.raw["mining-drill"]["pumpjack"].open_sound,
     close_sound = data.raw["mining-drill"]["pumpjack"].close_sound,
