@@ -133,6 +133,6 @@ data:extend({
     flow_color = {r=0.67, g=0.87, b=0.87},
     icon =  "__bzgas__/graphics/icons/gas.png",
     icon_size = 128,
-    order = "a[fluid]-f[organotins]"
+    order = "a[fluid]-f[gas]"
   },
 })

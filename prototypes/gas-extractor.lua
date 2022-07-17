@@ -36,7 +36,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "gas-processing",
+    name = "gas-extraction",
     icon = "__bzgas__/graphics/technology/gas-processing.png",
     icon_size = 256,
     prerequisites = ge_prereq,
