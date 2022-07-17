@@ -1,5 +1,5 @@
 -- require("gas-boiler/data-updates")
--- require("tin-recipe-updates")
+require("recipe-updates")
 -- require("tin-matter")
 -- require("omni")
 require("map-gen-preset-updates")
