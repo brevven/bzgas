@@ -13,6 +13,9 @@ See changelog.txt
 - [ElAdamo](https://mods.factorio.com/user/ElAdamo) (Gas-fired boiler: code, design, graphics)
 
 ## Thanks to 
+
+- [Benjah-bmm27](https://commons.wikimedia.org/wiki/User:Benjah-bmm27) ([Formaldehyde icon](https://commons.wikimedia.org/wiki/File:Formaldehyde-3D-vdW.png), public domain)
+
 ### Localization
 
 
