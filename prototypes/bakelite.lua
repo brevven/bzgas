@@ -18,7 +18,7 @@ data:extend({
   {
     type = "recipe",
     name = "bakelite",
-    category = "basic-chemistry",
+    category = "chemistry",
     main_product = "bakelite",
     enabled = "false",
     ingredients = {

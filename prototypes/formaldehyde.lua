@@ -1,12 +1,11 @@
-
 local util = require("data-util");
 
-data:extend({
-  {
-    type = "recipe-category",
-    name = "basic-chemistry",
-  }
-})
+-- data:extend({
+--   {
+--     type = "recipe-category",
+--     name = "basic-chemistry",
+--   }
+-- })
 
 data:extend({
   {
@@ -24,7 +23,7 @@ data:extend({
   {
     type = "recipe",
     name = "formaldehyde",
-    category = "basic-chemistry",
+    category = "chemistry",
     enabled = "false",
     ingredients = {
       {type="fluid", name="gas", amount=10}
@@ -42,7 +41,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {"gas-extraction"},
     effects = {
-      -- {type = "unlock-recipe", recipe = "basic-chemical-plant"},
+      {type = "unlock-recipe", recipe = "basic-chemical-plant"},
       {type = "unlock-recipe", recipe = "formaldehyde"},
     },
     unit = {
