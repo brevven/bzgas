@@ -1,5 +1,5 @@
 require("tin-recipe-final-stacking")
-require("tin-recipe-modules")
+require("modules")
 -- require("tin-recipe-final-5d")
 
 local util = require("data-util");
