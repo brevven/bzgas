@@ -6,8 +6,13 @@ data:extend({
   {
     type = "item",
     name = "phenol",
-    icon = "__bzgas__/graphics/icons/phenol.png",
-    icon_size = 128,
+    icon = "__bzgas__/graphics/icons/phenol.png", icon_size = 128,
+    pictures = {
+      {filename = "__bzgas__/graphics/icons/phenol.png",   size = 128, scale = 0.125},
+      {filename = "__bzgas__/graphics/icons/phenol-2.png", size = 128, scale = 0.125},
+      {filename = "__bzgas__/graphics/icons/phenol-3.png", size = 128, scale = 0.125},
+      {filename = "__bzgas__/graphics/icons/phenol-4.png", size = 128, scale = 0.125},
+    },
     subgroup = "raw-material",
     order = "g[phenol]",
     stack_size = util.get_stack_size(100),
