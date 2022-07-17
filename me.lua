@@ -3,6 +3,10 @@ local me = {}
 me.name = "bzgas"
 me.list = {}
 
+function me.use_phenol() 
+  return me.get_setting("bzgas-more-intermediates") == "phenol"
+end
+
 function me.get_setting(name)
   if settings.startup[name] == nil then
     return nil
