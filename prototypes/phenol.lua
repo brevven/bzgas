@@ -24,13 +24,10 @@ if data.raw.item["coke"] then
   local cat
   if mods.Krastorio2 then
     cat  = "smelting"
-    util.add_effect("steel-processing", {type="recipe-unlock", name="phenol"})
   elseif data.raw.item["foundry"] then
     cat = "founding"
-    util.add_effect("foundry", {type="recipe-unlock", name="phenol"})
   else
     cat = "advanced-crafting"
-    util.add_effect("automation", {type="recipe-unlock", name="phenol"})
   end
 
   data:extend({
@@ -48,6 +45,13 @@ if data.raw.item["coke"] then
       },
     }
   })
+  if mods.Krastorio2 then
+    util.add_effect("steel-processing", {type="unlock-recipe", recipe="phenol"})
+  elseif data.raw.item["foundry"] then
+    util.add_effect("foundry", {type="unlock-recipe", recipe="phenol"})
+  else
+    util.add_effect("automation", {type="unlock-recipe", recipe="phenol"})
+  end
 else
   data:extend({
     {
@@ -63,6 +67,6 @@ else
       },
     }
   })
-  util.add_effect("automation", {type="recipe-unlock", name="phenol"})
+  util.add_effect("automation", {type="unlock-recipe", recipe="phenol"})
 end
 end
