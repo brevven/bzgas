@@ -56,7 +56,7 @@ data:extend({
     autoplace = resource_autoplace.resource_autoplace_settings
     {
       name = "gas",
-      order = "c-g", -- Other resources are "b"; oil won't get placed if something else is already there.
+      order = "c-g",
       base_density = 8.2,
       base_spots_per_km2 = 1.8,
       random_probability = 1/48,
