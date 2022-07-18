@@ -28,3 +28,8 @@ if mods.Krastorio2 then
   util.add_prerequisite("basic-chemistry", "kr-basic-fluid-handling")
 end
 
+
+util.replace_ingredient("se-bio-combustion-data", "se-plasma-stream", "gas")
+util.replace_ingredient("se-bio-combustion-resistance-data", "se-plasma-stream", "gas")
+util.add_ingredient("se-genetic-data", "phenol", 1)
+util.add_ingredient("se-comparative-genetic-data", "phenol", 2)
