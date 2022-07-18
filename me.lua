@@ -3,6 +3,10 @@ local me = {}
 me.name = "bzgas"
 me.list = {}
 
+function me.use_boiler() 
+  return me.get_setting("bzgas-boiler")
+end
+
 function me.use_phenol() 
   return me.get_setting("bzgas-more-intermediates") == "phenol"
 end

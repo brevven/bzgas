@@ -4,9 +4,12 @@ require("prototypes/phenol")
 require("prototypes/formaldehyde")
 require("prototypes/bakelite")
 require("prototypes/basic-chemical-plant")
--- require("gas-boiler/data")
 
 local util = require("data-util");
+
+if util.me.use_boiler() then
+  require("gas-boiler/data")
+end
 
 -- Must be last
 util.create_list()

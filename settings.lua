@@ -1,3 +1,4 @@
+require("gas-boiler/settings")
 data:extend({
   {
 		type = "string-setting",
@@ -18,5 +19,11 @@ data:extend({
 		setting_type = "startup",
 		default_value = "phenol",
     allowed_values = {"phenol", "no"},
+	},
+  {
+		type = "bool-setting",
+		name = "bzgas-boiler",
+		setting_type = "startup",
+		default_value = true,
 	},
 })
