@@ -20,3 +20,11 @@ util.remove_ingredient("gas-boiler", "pump")
 util.add_ingredient("gas-boiler", "pipe", 1)
 util.add_ingredient("gas-boiler", "solder", 1)
 util.add_effect("gas-extraction", {type="unlock-recipe", recipe="gas-boiler"})
+
+
+
+if mods.Krastorio2 then
+  util.add_prerequisite("kr-fluids-chemistry", "basic-chemistry")
+  util.add_prerequisite("basic-chemistry", "kr-basic-fluid-handling")
+end
+
