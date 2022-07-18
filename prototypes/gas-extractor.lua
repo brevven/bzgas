@@ -48,7 +48,7 @@ data:extend({
     },
     unit = {
       count = 10,
-      ingredients = {{"automation-science-pack", 1}},
+      ingredients = mods.Krastorio2 and {{"basic-tech-card", 1}} or {{"automation-science-pack", 1}},
       time = 20,
     },
   },
