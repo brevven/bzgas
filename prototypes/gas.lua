@@ -20,8 +20,8 @@ data:extend({
   {
     type = "resource",
     name = "gas",
-    icon = "__base__/graphics/icons/crude-oil-resource.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon =  "__bzgas__/graphics/icons/gas.png",
+    icon_size = 128,
     flags = {"placeable-neutral"},
     category = "gas",
     subgroup = "raw-resource",
@@ -78,6 +78,7 @@ data:extend({
         frame_count = 4,
         variation_count = 1,
         shift = futil.by_pixel(0, -12),
+        scale = 0.75,
         hr_version =
         {
           filename = "__bzgas__/graphics/entity/ores/hr-gas.png",
@@ -87,7 +88,7 @@ data:extend({
           frame_count = 4,
           variation_count = 1,
           shift = futil.by_pixel(0, -12),
-          scale = 0.5,
+          scale = 0.5*0.75,
         }
       }
     },
@@ -102,6 +103,7 @@ data:extend({
         frame_count = 4,
         variation_count = 1,
         shift = futil.by_pixel(0, -12),
+        scale = 0.75,
         blend_mode = "normal",
         hr_version =
         {
@@ -114,6 +116,7 @@ data:extend({
           shift = futil.by_pixel(0, -17),
           scale = 0.5,
           blend_mode = "normal",
+          scale = 0.5*0.75,
         }
       }
     },
