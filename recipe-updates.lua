@@ -5,6 +5,17 @@ if util.me.use_phenol() then
   util.replace_some_ingredient("plastic-bar", "petroleum-gas", 15, "phenol", 1)
 end
 
+util.add_ingredient("power-switch", "bakelite", 5)
+util.replace_ingredient("programmable-speaker", "iron-plate", "bakelite")
+util.add_ingredient("accumulator", "bakelite", 5)
+util.replace_ingredient("assembling-machine-2", "iron-gear-wheel", "bakelite")
+
+
+util.replace_some_ingredient("explosives", "coal", 1, "formaldehyde", 10)
+
+
+
+-- Gas boiler updates, from this mod or another
 util.remove_ingredient("gas-boiler", "pump")
 util.add_ingredient("gas-boiler", "pipe", 1)
 util.add_ingredient("gas-boiler", "solder", 1)
