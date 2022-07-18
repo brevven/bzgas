@@ -1,9 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
-Date: 2022-07-15
+Date: 2022-07-19
   Features:
     - Alpha release. Adds natural gas, early game plastic, and other intermediates.
-    - Integrate's ElAdamo's Gas-fired boiler mod.
+    - Integrate's ElAdamo's public domain Gas-fired boiler mod.
       If it's ever updated, might remove from this mod and make a dependency.
     - Compatible with Krastorio 2
     - Compatible with Space Exploration
