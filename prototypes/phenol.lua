@@ -20,7 +20,6 @@ data:extend({
 })
 
 if data.raw.item["coke"] then
-  local er = mods.Krastorio2 and 10 or 6.4
   local cat
   if mods.Krastorio2 then
     cat  = "smelting"
@@ -30,21 +29,39 @@ if data.raw.item["coke"] then
     cat = "advanced-crafting"
   end
 
-  data:extend({
-    {
-      type = "recipe",
-      name = "phenol",
-      category = cat,
-      main_product = "phenol",
-      enabled = "false",
-      ingredients = {{"coal", 4}},
-      energy_required = er,
-      results = {
-        {type="item", name="phenol", amount = 2},
-        {type="item", name="coke", amount = 1},
-      },
-    }
-  })
+  if mods.Krastorio2 then
+    data:extend({
+      {
+        type = "recipe",
+        name = "phenol",
+        category = cat,
+        main_product = "phenol",
+        enabled = "false",
+        ingredients = {{"coal", 6}, {"wood", 6}},
+        energy_required = 16,
+        results = {
+          {type="item", name="phenol", amount = 6},
+          {type="item", name="coke", amount = 3},
+        },
+      }
+    })
+  else
+    data:extend({
+      {
+        type = "recipe",
+        name = "phenol",
+        category = cat,
+        main_product = "phenol",
+        enabled = "false",
+        ingredients = {{"coal", 4}},
+        energy_required = 6.4,
+        results = {
+          {type="item", name="phenol", amount = 2},
+          {type="item", name="coke", amount = 1},
+        },
+      }
+    })
+  end
   if mods.Krastorio2 then
     util.add_effect("steel-processing", {type="unlock-recipe", recipe="phenol"})
   elseif data.raw.item["foundry"] then
