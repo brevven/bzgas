@@ -8,9 +8,12 @@ local ge_ingredients = {
 }
 local ge_prereq = {"automation"}
 if mods.bzlead then table.insert(ge_ingredients, {"lead-plate", 4}) end
-if mods.Krastorio2 or mods["aai-industry"] then
+if mods.Krastorio2 then 
   table.insert(ge_ingredients, {"sand", 10})
-  ge_prereq = {"sand"}
+  ge_prereq = {"kr-stone-processing"}
+elseif mods["aai-industry"] then
+  table.insert(ge_ingredients, {"sand", 10})
+  ge_prereq = {"sand-processing"}
 elseif data.raw.item["silica"] and data.raw.technology["silica-processing"] then
   table.insert(ge_ingredients, {"silica", 20})
   ge_prereq = {"silica-processing"}
