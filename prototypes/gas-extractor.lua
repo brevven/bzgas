@@ -135,12 +135,29 @@ data:extend({
     animations = {
       layers = {
         {
-          filename = "__bzgas__/graphics/entity/gas-extractor.png",
+          filename = "__bzgas__/graphics/entity/gas-extractor-animated.png",
           priority = "extra-high",
-          width = 263,
-          height = 600,
-          scale = 1/3,
+          width = 267,
+          height = 604,
+          scale = 0.33, -- just under 1/3, for height ~200. Check why height is 604 and not 600
+          frame_count = 100,
+          line_length = 8,
+          animation_speed = 0.5,
           shift = futil.by_pixel(0, -60),
+        },
+        {
+          stripes = futil.multiplystripes(100, {{
+            filename = "__bzgas__/graphics/entity/gas-extractor-shadow.png",
+            width_in_frames = 1,
+            height_in_frames = 1,
+          }}),
+          priority = "extra-high",
+          width = 331,
+          height = 64,
+          draw_as_shadow = true,
+          frame_count = 100,
+          animation_speed = 0.5,
+          shift = futil.by_pixel(119, 8),
         },
       },
     },
