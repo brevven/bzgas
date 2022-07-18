@@ -1,5 +1,5 @@
 require("recipe-updates")
--- require("tin-matter")
+require("matter")
 -- require("omni")
 require("map-gen-preset-updates")
 -- require("strange-matter")
