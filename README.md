@@ -10,7 +10,7 @@ See changelog.txt
 ## Created by
 
 - [brevven](https://mods.factorio.com/user/brevven) (code, design, graphics)
-- [ElAdamo](https://mods.factorio.com/user/ElAdamo) (Gas-fired boiler: code, design, graphics)
+- [ElAdamo](https://mods.factorio.com/user/ElAdamo) (Gas-fired boiler: code, design, graphics) (code is public domain)
 
 ## Thanks to 
 
