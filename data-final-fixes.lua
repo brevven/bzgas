@@ -11,8 +11,8 @@ local util = require("data-util");
 if data.raw.recipe["electronic-circuit-stone"] then
   util.set_hidden("electronic-circuit-stone")
   util.replace_ingredient("electronic-circuit-stone", "stone-tablet", "bakelite")
-  util.remove_recipe_effect("electronics", "electronics-circuit-stone")
-  util.set_hidden("electronics-circuit-stone")
+  util.remove_recipe_effect("electronics", "electronic-circuit-stone")
+  util.set_hidden("electronic-circuit-stone")
 end
 
 util.replace_ingredient("electronic-circuit", "wood", "bakelite")
