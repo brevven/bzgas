@@ -47,3 +47,9 @@ util.add_ingredient("basic-circuit-board", "bakelite", 1)
 util.set_enabled("basic-circuit-board", false)
 util.add_unlock("electronics", "basic-circuit-board")
 
+
+-- Modmash electronics
+util.replace_ingredient("blank-circuit", "iron-plate", "bakelite")
+util.set_enabled("blank-circuit", false)
+util.add_unlock("electronics", "blank-circuit")
+

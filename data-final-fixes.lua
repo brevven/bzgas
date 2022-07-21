@@ -42,5 +42,6 @@ if not mods.Krastorio2 and not mods["aai-industry"] and not mods.bzaluminum and 
   util.add_prerequisite("logistic-science-pack", "electronics")
 end
 
+util.remove_ingredient("small-lamp", "blank-circuit") -- mod mash
 -- Must be last
 util.create_list()
