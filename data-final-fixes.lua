@@ -9,14 +9,10 @@ local util = require("data-util");
 
 -- Electronic circuits need final fixes
 if data.raw.recipe["electronic-circuit-stone"] then
-  data.raw.recipe["electronic-circuit-stone"].hidden = true
-  if data.raw.technology["electronics"] then
-    for i, effect in pairs(data.raw.technology["electronics"].effects) do
-      if effect.recipe == "electronic-circuit-stone" then
-        table.remove(data.raw.technology["electronics"].effects, i)
-      end
-    end
-  end
+  util.set_hidden("electronic-circuit-stone")
+  util.replace_ingredient("electronic-circuit-stone", "stone-tablet", "bakelite")
+  util.remove_recipe_effect("electronics", "electronics-circuit-stone")
+  util.set_hidden("electronics-circuit-stone")
 end
 
 util.replace_ingredient("electronic-circuit", "wood", "bakelite")

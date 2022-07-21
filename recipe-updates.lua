@@ -33,3 +33,17 @@ util.replace_ingredient("se-bio-combustion-data", "se-plasma-stream", "gas")
 util.replace_ingredient("se-bio-combustion-resistance-data", "se-plasma-stream", "gas")
 util.add_ingredient("se-genetic-data", "phenol", 1)
 util.add_ingredient("se-comparative-genetic-data", "phenol", 2)
+
+
+
+-- Bob's Electronics SE KR
+util.remove_recipe_effect("electronics", "basic-circuit-board-stone")
+util.set_hidden("basic-circuit-board-stone")
+util.replace_ingredient("basic-circuit-board-stone", "stone-tablet", "bakelite")
+util.remove_ingredient("basic-circuit-board", "wood")
+util.remove_ingredient("basic-circuit-board", "wooden-board")
+util.remove_ingredient("basic-circuit-board", "iron-plate")
+util.add_ingredient("basic-circuit-board", "bakelite", 1)
+util.set_enabled("basic-circuit-board", false)
+util.add_unlock("electronics", "basic-circuit-board")
+
