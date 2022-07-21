@@ -78,13 +78,3 @@ plant_e.energy_source = {
 -- plant_e.animation.west.layers[1].hr_version.tint = ptint
 data.raw["assembling-machine"]["basic-chemical-plant"] = plant_e
 -- end entity
-
-log("BZZZZZZZZZZZ")
-log("")
-log("")
-log(serpent.dump(data.raw.item["basic-chemical-plant"]))
-log("")
-log("")
-log(serpent.dump(data.raw["assembling-machine"]["basic-chemical-plant"]))
-log("")
-log("")
