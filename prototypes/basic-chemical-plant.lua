@@ -39,6 +39,7 @@ data.raw.item["basic-chemical-plant"] = plant_i
 local plant_e = futil.table.deepcopy(data.raw["assembling-machine"]["chemical-plant"])
 plant_e.name = "basic-chemical-plant"
 plant_e.minable = {mining_time = 0.5, result = "basic-chemical-plant"}
+plant_e.module_specification = {module_slots = 0}
 plant_e.working_visualisations = {plant_e.working_visualisations[1], plant_e.working_visualisations[2]} -- no smoke
 plant_e.animation.north.layers[1].filename="__bzgas__/graphics/entity/chemical-plant.png"
 plant_e.animation.north.layers[1].hr_version.filename="__bzgas__/graphics/entity/hr-chemical-plant.png"
