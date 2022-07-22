@@ -1,8 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2022-07-23
+  Features:
+    - K2: Biomethanol -> formaldehyde recipe
   Fixes:
-    - Minor fix to AAI recipes, to not duplicate.
+    - Remove module slots from basic (burner) chem plant
+    - Minor fix to AAI recipe unlocks
+    - Map gen presets fixed
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2022-07-22
