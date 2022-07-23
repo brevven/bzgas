@@ -4,6 +4,7 @@ require("matter")
 require("map-gen-preset-updates")
 require("strange-matter")
 require("compatibility/248k")
+require("compatibility/5dims")
 
 local util = require("data-util");
 
