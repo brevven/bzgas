@@ -282,6 +282,29 @@ function add_product(recipe, product)
   end
 end
 
+function util.replace_ingredient_add_to(recipe_name, old, new)
+  if me.bypass[recipe_name] then return end
+  if data.raw.recipe[recipe_name] and (data.raw.item[new] or data.raw.fluid[new]) then
+    me.add_modified(recipe_name)
+    replace_ingredient_add_to(data.raw.recipe[recipe_name], old, new)
+    replace_ingredient_add_to(data.raw.recipe[recipe_name].normal, old, new)
+    replace_ingredient_add_to(data.raw.recipe[recipe_name].expensive, old, new)
+  end
+end
+
+function replace_ingredient_add_to(recipe, old, new)
+	if recipe ~= nil and recipe.ingredients ~= nil then
+    for i, existing in pairs(recipe.ingredients) do
+      if existing[1] == new or existing.name == new then
+        add_to_ingredient(recipe, new, existing[2] and existing[2] or existing.amount)
+        remove_ingredient(recipe, old)
+        return
+      end
+    end
+    replace_ingredient(recipe, old, new)
+	end
+end
+
 -- Replace one ingredient with another in a recipe
 function util.replace_ingredient(recipe_name, old, new, amount)
   if me.bypass[recipe_name] then return end
