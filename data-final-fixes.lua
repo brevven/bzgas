@@ -16,7 +16,7 @@ if data.raw.recipe["electronic-circuit-stone"] then
 end
 
 util.replace_ingredient("electronic-circuit", "wood", "bakelite")
-util.replace_ingredient("electronic-circuit", "iron-plate", "bakelite")
+util.replace_ingredient_add_to("electronic-circuit", "iron-plate", "bakelite")
 util.set_icons("electronic-circuit", nil)
 
 -- Vanilla burner phase tweaks -- green circuits after electronics
