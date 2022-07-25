@@ -69,6 +69,26 @@ if data.raw.item["coke"] then
   else
     util.add_effect("automation", {type="unlock-recipe", recipe="phenol"})
   end
+  data:extend({
+    {
+      type = "recipe",
+      name = "phenol-from-oil",
+      category = "chemistry",
+      enabled = "false",
+      icons = {
+        {icon = "__bzgas__/graphics/icons/phenol.png", icon_size = 128},
+        {icon = "__base__/graphics/icons/fluid/light-oil.png", icon_size = 64, icon_mipmaps = 4, scale=0.25, shift={-8,-8}},
+      },
+      ingredients = {
+        {type="fluid", name="light-oil", amount=20}
+      },
+      energy_required = 15,
+      results = {
+        {type="item", name="phenol", amount=3},
+      },
+    }
+  })
+  util.add_unlock("advanced-oil-processing", "phenol-from-oil")
 else
   data:extend({
     {
@@ -80,7 +100,7 @@ else
       energy_required = 1,
       ingredients = {{"coal", 1}},
       results = {
-        {type="item", name="phenol", amount = 1},
+        {type="item", name="phenol", amount=1},
       },
     }
   })
