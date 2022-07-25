@@ -92,6 +92,7 @@ gf_boiler_entity.energy_source = {
 		pipe_connections = {
 			{type = "input", position = {0, 1.5}},
 		},
+    production_type = "input",
 		secondary_draw_orders = {
 			south = 32,
 			north = -1,
