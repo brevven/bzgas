@@ -51,9 +51,9 @@ data:extend({
     -- walking_sound = sounds.oil,
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    map_color = {0.9, 0.7, 0.2},
+    map_color = {0.9, 0.75, 0.2},
     map_grid = false,
-    autoplace = resource_autoplace.resource_autoplace_settings
+    autoplace = resource_autoplace.resource_autoplace_settings(
     {
       name = "gas",
       order = "c-g",
@@ -61,11 +61,11 @@ data:extend({
       base_spots_per_km2 = 1.8,
       random_probability = 1/48,
       random_spot_size_minimum = 1,
-      random_spot_size_maximum = 1, -- don't randomize spot size
-      additional_richness = 220000, -- this increases the total everywhere, so base_density needs to be decreased to compensate
+      random_spot_size_maximum = 1,
+      additional_richness = 220000,
       has_starting_area_placement = true,
-      regular_rq_factor_multiplier = 1
-    },
+      regular_rq_factor_multiplier = 1,
+    }),
     stage_counts = {0},
     stages =
     {
@@ -140,3 +140,21 @@ data:extend({
     order = "a[fluid]-f[gas]"
   },
 })
+if util.me.finite() then
+  data.raw.resource["gas"].infinite = false
+  data.raw.resource["gas"].minimum = 20000
+  data.raw.resource["gas"].normal = 80000
+  data.raw.resource["crude-oil"].minable = {
+    mining_time = 1,
+    results = {
+      {
+        type = "fluid",
+        name = "gas",
+        amount_min = 20,
+        amount_max = 20,
+        probability = 1,
+      },
+    },
+  }
+
+end

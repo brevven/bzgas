@@ -3,6 +3,10 @@ local me = {}
 me.name = "bzgas"
 me.list = {}
 
+function me.finite()   -- Krastorio 2
+  return me.get_setting("kr-finite-oil")
+end
+
 function me.use_boiler() 
   return me.get_setting("bzgas-boiler")
 end

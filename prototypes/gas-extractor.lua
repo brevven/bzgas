@@ -86,7 +86,7 @@ data:extend({
       }
     },
     energy_usage = "90kW",
-    mining_speed = 1,
+    mining_speed = util.me.finite() and 2 or 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
     module_specification =
