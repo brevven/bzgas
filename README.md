@@ -18,4 +18,4 @@ See changelog.txt
 
 ### Localization
 
-
+- [RiCZrd](https://mods.factorio.com/user/RiCZrd) (cs)
