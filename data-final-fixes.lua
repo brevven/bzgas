@@ -15,8 +15,12 @@ if data.raw.recipe["electronic-circuit-stone"] then
   util.set_hidden("electronic-circuit-stone")
 end
 
-util.replace_ingredient("electronic-circuit", "wood", "bakelite")
-util.replace_ingredient_add_to("electronic-circuit", "iron-plate", "bakelite")
+-- electronic circuits should each require one bakelite
+local amt = util.get_amount("electronic-circuit")
+util.remove_ingredient("electronic-circuit", "wood")
+util.remove_ingredient("electronic-circuit", "iron-plate")
+util.remove_ingredient("electronic-circuit", "stone-tablet")
+util.add_ingredient("electronic-circuit", "bakelite", amt)
 util.set_icons("electronic-circuit", nil)
 
 -- Vanilla burner phase tweaks -- green circuits after electronics

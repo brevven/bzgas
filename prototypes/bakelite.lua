@@ -25,7 +25,7 @@ data:extend({
       {util.me.use_phenol() and "phenol" or "coal", 1},
       {type="fluid", name="formaldehyde", amount=10}
     },
-    energy_required = 6,
+    energy_required = 2,
     results = {
       {type="item", name="bakelite", amount = 2},
     },

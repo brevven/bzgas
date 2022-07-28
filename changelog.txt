@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.10
+Date: 2022-07-28
+  Fixes:
+    - SE/K2: Fix incorrect extreme quantity of bakelite needed.
+  Changes:
+    - Bakelite is now also created much faster in chemical plants.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.9
 Date: 2022-07-26
   Localization:
