@@ -5,7 +5,8 @@ require("compatibility/ir2")
 
 local util = require("data-util");
 
--- core mining balancing TODO
+-- core mining balancing
+util.add_to_product("se-core-fragment-omni", "gas", -56)
 
 
 -- Electronic circuits need final fixes
