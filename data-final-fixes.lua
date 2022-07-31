@@ -1,6 +1,7 @@
 require("stacking")
 require("modules")
 -- require("tin-recipe-final-5d")
+require("compatibility/ir2")
 
 local util = require("data-util");
 
