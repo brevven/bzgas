@@ -551,6 +551,25 @@ function util.remove_raw(t, name)
   end
 end
 
+-- Set energy required
+function util.set_recipe_time(recipe_name, time)
+  me.add_modified(recipe_name)
+  if data.raw.recipe[recipe_name] then
+    if me.bypass[recipe_name] then return end
+    set_recipe_time(data.raw.recipe[recipe_name], time)
+    set_recipe_time(data.raw.recipe[recipe_name].normal, time)
+    set_recipe_time(data.raw.recipe[recipe_name].expensive, time)
+	end
+end
+
+function set_recipe_time(recipe, time)
+  if recipe then
+    if recipe.energy_required then
+      recipe.energy_required = time
+    end
+  end
+end
+
 -- Multiply energy required
 function util.multiply_time(recipe_name, factor)
   me.add_modified(recipe_name)
