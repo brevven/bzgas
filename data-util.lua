@@ -282,6 +282,26 @@ function add_product(recipe, product)
   end
 end
 
+-- Get the amount of the ingredient, will check base/normal not expensive
+function util.get_ingredient_amount(recipe_name, ingredient_name)
+  local recipe = data.raw.recipe[recipe_name]
+  if recipe then
+    if recipe.normal and recipe.normal.ingredients then
+      for i, ingredient in pairs(recipe.normal.ingredients) do
+        if ingredient[1] == ingredient_name then return ingredient[2] end
+        if ingredient.name == ingredient_name then return ingredient.amount end
+      end
+    elseif recipe.ingredients then
+      for i, ingredient in pairs(recipe.ingredients) do
+        if ingredient[1] == ingredient_name then return ingredient[2] end
+        if ingredient.name == ingredient_name then return ingredient.amount end
+      end
+    end
+    return 1
+  end
+  return 0
+end
+
 -- Get the amount of the result, will check base/normal not expensive
 function util.get_amount(recipe_name, product)
   if not product then product = recipe_name end
