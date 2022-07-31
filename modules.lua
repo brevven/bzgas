@@ -1,4 +1,4 @@
-recipes = {"bakelite", "phenol"} -- formaldehyde excluded intentionally for theme
+recipes = {"bakelite", "phenol", "phenol-from-oil"} -- formaldehyde excluded intentionally for theme
 
 for i, recipe in pairs(recipes) do
   if data.raw.recipe[recipe] then
