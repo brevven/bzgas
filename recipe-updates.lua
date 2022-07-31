@@ -7,8 +7,11 @@ end
 
 util.add_ingredient("power-switch", "bakelite", 5)
 util.replace_ingredient("programmable-speaker", "iron-plate", "bakelite")
-util.add_ingredient("accumulator", "bakelite", 5)
 util.replace_ingredient("assembling-machine-2", "iron-gear-wheel", "bakelite")
+
+util.add_ingredient("accumulator", "bakelite", 5)
+util.add_to_ingredient("accumulator", "battery", 3)
+util.set_product_amount("accumulator", "accumulator", 2)
 
 
 util.replace_some_ingredient("explosives", "coal", 1, "formaldehyde", 10)
