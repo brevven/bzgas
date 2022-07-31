@@ -53,11 +53,12 @@ plant_e.animation.east.layers[1].filename="__bzgas__/graphics/entity/chemical-pl
 plant_e.animation.east.layers[1].hr_version.filename="__bzgas__/graphics/entity/hr-chemical-plant.png"
 plant_e.animation.west.layers[1].filename="__bzgas__/graphics/entity/chemical-plant.png"
 plant_e.animation.west.layers[1].hr_version.filename="__bzgas__/graphics/entity/hr-chemical-plant.png"
+plant_e.next_upgrade="chemical-plant"
 plant_e.energy_source = {
   type = "burner",
   fuel_inventory_size = 1,
   effectivity = 1,
-  fuel_categories = {"chemical"},
+  fuel_categories = mods["aai-industry"] and {"chemical", "processed-chemical"} or {"chemical"},
   smoke = {
     {
       name = "smoke",
