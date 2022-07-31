@@ -27,7 +27,7 @@ if mods.Krastorio2 then
       main_product = "formaldehyde",
       icons = {
         {icon =  "__bzgas__/graphics/icons/formaldehyde.png", icon_size = 128, scale = 0.125},
-        {icon = kr_fluids_icons_path.."oxygen.png", icon_size = 64, scale = 0.125, icon_mipmaps = 4, shift={-8,-8}},
+        {icon = kr_fluids_icons_path.."biomethanol.png", icon_size = 64, scale = 0.125, icon_mipmaps = 4, shift={-5,-5}},
       },
       enabled = "false",
       ingredients = {
