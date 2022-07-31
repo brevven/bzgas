@@ -1,6 +1,6 @@
 {
     "name": "bzgas",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "factorio_version": "1.1",
     "title": "Natural Gas",
     "author": "Brevven",
@@ -23,4 +23,3 @@
     ],
     "description": "(alpha version) Adds a natural gas resource, along with early game plastic.\nIntegrates ElAdamo's gas-fired boiler.\n\nCompatible with Krastorio 2 and Space Exploration. A standalone piece of BZ Mods."
 }
-

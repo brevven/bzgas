@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.11
+Date: 2022-07-31
+  Changes:
+    - Can use upgrade planner from basic chem plant to chem plant
+    - SE: Rebalanced core mining output
+    - AAI: Can use processed fuel for basic chem plant
+  Features:
+    - Some basic 248k compatibility. More to come.
+  Fixes:
+    - Will load with IR2. Probably will deadlock. Not true compatibility.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.10
 Date: 2022-07-28
   Fixes:
