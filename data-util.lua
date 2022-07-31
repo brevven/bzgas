@@ -395,6 +395,46 @@ function replace_some_ingredient(recipe, old, old_amount, new, new_amount, is_fl
 	end
 end
 
+-- set the amount of a product. 
+function util.set_product_amount(recipe_name, product, amount)
+  me.add_modified(recipe_name)
+  if data.raw.recipe[recipe_name] then
+    if me.bypass[recipe_name] then return end
+    set_product_amount(data.raw.recipe[recipe_name], product, amount)
+    set_product_amount(data.raw.recipe[recipe_name].normal, product, amount)
+    set_product_amount(data.raw.recipe[recipe_name].expensive, product, amount)
+	end
+end
+
+function set_product_amount(recipe, product, amount)
+  if recipe then
+    if recipe.result_count then
+      recipe.result_count = amount
+    end
+    if recipe.results then
+      for i, result in pairs(recipe.results) do
+        if result.name == product then
+          if result.amount then
+            result.amount = amount
+          end
+          if result.amount_min ~= nil then
+            result.amount_min =  nil
+            result.amount_max =  nil
+            result.amount = amount
+          end
+        end
+        if result[1] == product then
+          result[2] = amount
+        end
+      end
+    end
+    if not recipe.results and not recipe.result_count then
+      -- implicit one item result
+      recipe.result_count = amount
+    end
+  end
+end
+
 -- multiply the cost, energy, and results of a recipe by a multiple
 function util.multiply_recipe(recipe_name, multiple)
   me.add_modified(recipe_name)
