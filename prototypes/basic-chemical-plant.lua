@@ -35,6 +35,10 @@ plant_i.icons = {
 data.raw.item["basic-chemical-plant"] = plant_i
 -- end item
 
+-- Replaceable group
+if not data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group then
+  data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
+end
 -- entity
 local plant_e = futil.table.deepcopy(data.raw["assembling-machine"]["chemical-plant"])
 plant_e.name = "basic-chemical-plant"
