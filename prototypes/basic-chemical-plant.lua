@@ -72,7 +72,7 @@ plant_e.energy_source = {
     },
   },
 }
--- NOTE: Saving tint here in case this is needed.
+-- NOTE: Saving alternate tint here in case this is needed.
 -- local ptint = {r=.7,g=0.7,b=0.9,a=1}
 -- plant_e.animation.north.layers[1].tint = ptint
 -- plant_e.animation.north.layers[1].hr_version.tint = ptint
