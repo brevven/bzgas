@@ -22,6 +22,12 @@ data:extend({
 	},
   {
 		type = "bool-setting",
+		name = "bzgas-handcraft",
+		setting_type = "startup",
+		default_value = false,
+	},
+  {
+		type = "bool-setting",
 		name = "bzgas-boiler",
 		setting_type = "startup",
 		default_value = true,

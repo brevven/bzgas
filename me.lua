@@ -7,6 +7,11 @@ function me.finite()   -- Krastorio 2
   return me.get_setting("kr-finite-oil")
 end
 
+function me.handcraft() 
+  return me.get_setting("bzgas-handcraft")
+end
+
+
 function me.use_boiler() 
   return me.get_setting("bzgas-boiler")
 end
