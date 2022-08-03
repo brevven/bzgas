@@ -8,6 +8,13 @@ local util = require("data-util");
 -- core mining balancing
 util.add_to_product("se-core-fragment-omni", "gas", -56)
 
+-- Fix basic chemical plant fuels for K2
+if mods.Krastorio2 and 
+data.raw["assembling-machine"]["basic-chemical-plant"] and 
+data.raw["assembling-machine"]["basic-chemical-plant"].energy_source and 
+data.raw["assembling-machine"]["basic-chemical-plant"].energy_source.fuel_categories then
+  table.insert(data.raw["assembling-machine"]["basic-chemical-plant"].energy_source.fuel_categories , "vehicle-fuel")
+end
 
 -- Vanilla burner phase tweaks -- green circuits after electronics
 -- Electronic circuit recipe set below in compatibility script
