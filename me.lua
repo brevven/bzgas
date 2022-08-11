@@ -17,6 +17,7 @@ function me.use_boiler()
 end
 
 function me.use_phenol() 
+  if me.get_setting("bz-all-intermediates") then return true end
   return me.get_setting("bzgas-more-intermediates") == "phenol"
 end
 

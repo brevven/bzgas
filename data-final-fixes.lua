@@ -21,7 +21,7 @@ end
 if not mods.Krastorio2 and not mods["aai-industry"] and not mods.bzaluminum and not mods.bzcarbon then
   util.replace_ingredient("offshore-pump", "electronic-circuit", "copper-cable")
   util.replace_ingredient("lab", "electronic-circuit", "copper-cable")
-  util.replace_ingredient("electric-mining-drill", "electronic-circuit", "copper-cable")
+  util.replace_ingredient("electric-mining-drill", "electronic-circuit", "copper-cable", 2, true)
   util.replace_ingredient("assembling-machine-1", "electronic-circuit", "copper-plate")
   util.replace_ingredient("radar", "electronic-circuit", "copper-plate")
   util.replace_ingredient("splitter", "electronic-circuit", "copper-cable", 20)
@@ -38,6 +38,9 @@ if not mods.Krastorio2 and not mods["aai-industry"] and not mods.bzaluminum and 
   util.set_enabled("electronic-circuit", false)
   util.set_enabled("inserter", false)
   util.add_prerequisite("logistic-science-pack", "electronics")
+end
+if not mods.bzaluminum and not mods.bzcarbon then
+  util.replace_ingredients_prior_to("electronics", "electronic-circuit", "copper-cable", 2)
 end
 
 util.remove_ingredient("small-lamp", "blank-circuit") -- mod mash
