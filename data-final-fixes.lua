@@ -31,7 +31,7 @@ if not mods.Krastorio2 and not mods["aai-industry"] and not mods.bzaluminum and 
   util.add_ingredient("repair-pack", "copper-cable", 6)
   util.set_ingredient("repair-pack", "iron-gear-wheel", 3)
 
-  util.add_effect("electronics", { type = "unlock-recipe", recipe = "electronic-circuit" })
+  util.add_unlock_force("electronics", "electronic-circuit")
   util.add_effect("electronics", { type = "unlock-recipe", recipe = "inserter" })
   util.add_effect("electronics", { type = "unlock-recipe", recipe = "long-handed-inserter" })
   util.remove_recipe_effect("automation", "long-handed-inserter")

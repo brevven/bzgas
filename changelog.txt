@@ -4,6 +4,8 @@ Date: 2022-08-11
   Localization:
     - ja locale, thanks to Sakuro
     - ru locale, thanks to Pergamum663
+  Fixes:
+    - Slightly more improved compatibility, thanks to U.N.Owen
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.16
 Date: 2022-08-09
