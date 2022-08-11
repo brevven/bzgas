@@ -19,3 +19,5 @@ See changelog.txt
 ### Localization
 
 - [RiCZrd](https://mods.factorio.com/user/RiCZrd) (cs)
+- [Sakuro](https://github.com/sakuro) (ja)
+- [Pergamum663](https://github.com/Pergamum663) (ru)
