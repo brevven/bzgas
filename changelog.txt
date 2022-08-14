@@ -3,6 +3,8 @@ Version: 0.0.18
 Date: 2022-08-15
   Changes:
     - Minor, change tech name from "bakelite" to "basic plastics"
+  Fixes:
+    - Add missing locale string
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.17
 Date: 2022-08-11
