@@ -1,8 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.18
-Date: 2022-08-15
+Date: 2022-08-17
   Changes:
     - Minor, change tech name from "bakelite" to "basic plastics"
+    - SE: can make methane from natural gas.
+    - SE: can make formaldehyde from methane
+    - SE: methane has a fuel value
+    - SE + K2: methane can be reformed to hydrogen
   Fixes:
     - Add missing locale string
 ---------------------------------------------------------------------------------------------------

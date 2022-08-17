@@ -5,6 +5,7 @@ require("prototypes/formaldehyde")
 require("prototypes/bakelite")
 require("prototypes/basic-chemical-plant")
 require("prototypes/k2-recipe")
+require("prototypes/se-recipe")
 
 local util = require("data-util");
 
