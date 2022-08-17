@@ -43,6 +43,7 @@ if not mods.bzaluminum and not mods.bzcarbon then
   util.replace_ingredients_prior_to("electronics", "electronic-circuit", "copper-cable", 2)
 end
 
+util.add_prerequisite("nanobots", "electronics")
 util.remove_ingredient("small-lamp", "blank-circuit") -- mod mash
 
 -- Should come as late as possible, doesn't need to be last
