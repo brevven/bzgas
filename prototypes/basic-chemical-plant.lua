@@ -19,6 +19,7 @@ data:extend({
 util.add_ingredient("basic-chemical-plant", "lead-plate", 4)
 util.replace_ingredient("basic-chemical-plant", "iron-plate", "aluminum-plate")
 util.replace_ingredient("basic-chemical-plant", "copper-plate", "tin-plate")
+util.replace_ingredient("basic-chemical-plant", "stone-brick", "sand", 10)
 util.replace_ingredient("basic-chemical-plant", "stone-brick", "silica", 10)
 
 -- item

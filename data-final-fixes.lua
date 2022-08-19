@@ -46,6 +46,14 @@ end
 util.add_prerequisite("nanobots", "electronics")
 util.remove_ingredient("small-lamp", "blank-circuit") -- mod mash
 
+data.raw["assembling-machine"]["basic-chemical-plant"].localised_description = data.raw["assembling-machine"]["chemical-plant"].localised_description
+if util.se6() then
+  if data.raw["assembling-machine"]["basic-chemical-plant"] and
+  data.raw["assembling-machine"]["chemical-plant"] then
+    data.raw["assembling-machine"]["basic-chemical-plant"].localised_description = data.raw["assembling-machine"]["chemical-plant"].localised_description
+  end
+end
+
 -- Should come as late as possible, doesn't need to be last
 require("compatibility/electronic-circuit")
 

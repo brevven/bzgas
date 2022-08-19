@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.21
+Date: 2022-08-18
+  Changes:
+    - In modded games, if sand exists, prefer sand to silica in basic chem plant recipe. This should
+      help avoid some strange unlock orders.
+    - Minor locale fixes
+---------------------------------------------------------------------------------------------------
 Version: 0.0.20
 Date: 2022-08-18
   Fixes:
