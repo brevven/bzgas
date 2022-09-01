@@ -21,7 +21,9 @@ util.set_icons("electronic-circuit", nil)
 if util.me.handcraft() then
   data:extend({{ type = "recipe-category", name = "handcraft-only" }})
   for i, character in pairs(data.raw.character) do
-    table.insert(character.crafting_categories, "handcraft-only")
+    if character and character.crafting_categories then
+      table.insert(character.crafting_categories, "handcraft-only")
+    end
   end
   local hcec = futil.table.deepcopy(data.raw.recipe["electronic-circuit"])
   hcec.name = "electronic-circuit-handcraft-only"

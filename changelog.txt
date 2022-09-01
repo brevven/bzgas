@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
-Date: 2022-08-25
+Date: 2022-08-24
+  Fixes:
+    - Attempt fix of issue when some character has no crafting categories
   Changes:
     - Beta release.
   Localization:
