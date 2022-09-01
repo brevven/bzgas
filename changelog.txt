@@ -2,6 +2,7 @@
 Version: 0.1.1
 Date: 2022-09-01
   Changes:
+    - Fix basic chem plant icon in upgrade planner, etc
     - When coke is present, alternate phenol recipe now 12 energy instead of 15.
     - Minor recipe unlock tweaks
 ---------------------------------------------------------------------------------------------------

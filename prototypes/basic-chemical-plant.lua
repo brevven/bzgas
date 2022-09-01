@@ -28,6 +28,7 @@ plant_i.name = "basic-chemical-plant"
 plant_i.place_result = "basic-chemical-plant"
 plant_i.icon = nil
 plant_i.icon_size = nil
+plant_i.icon_mipmaps = nil
 plant_i.icons = {
   {icon="__base__/graphics/icons/chemical-plant.png", icon_size=64},
   {icon="__bzgas__/graphics/icons/chemical-plant-overlay.png", icon_size=64},
@@ -55,6 +56,13 @@ plant_e.animation.east.layers[1].hr_version.filename="__bzgas__/graphics/entity/
 plant_e.animation.west.layers[1].filename="__bzgas__/graphics/entity/chemical-plant.png"
 plant_e.animation.west.layers[1].hr_version.filename="__bzgas__/graphics/entity/hr-chemical-plant.png"
 plant_e.next_upgrade="chemical-plant"
+plant_e.icon = nil
+plant_e.icon_size = nil
+plant_e.icon_mipmaps = nil
+plant_e.icons = {
+  {icon="__base__/graphics/icons/chemical-plant.png", icon_size=64},
+  {icon="__bzgas__/graphics/icons/chemical-plant-overlay.png", icon_size=64},
+}
 
 plant_e.energy_source = {
   type = "burner",
