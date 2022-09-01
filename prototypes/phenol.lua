@@ -82,7 +82,7 @@ if data.raw.item["coke"] then
       ingredients = {
         {type="fluid", name="light-oil", amount=20}
       },
-      energy_required = 15,
+      energy_required = 12,
       results = {
         {type="item", name="phenol", amount=3},
       },
