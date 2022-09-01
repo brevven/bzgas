@@ -67,7 +67,7 @@ if data.raw.item["coke"] then
   elseif data.raw.item["foundry"] then
     util.add_effect("foundry", {type="unlock-recipe", recipe="phenol"})
   else
-    util.add_effect("automation", {type="unlock-recipe", recipe="phenol"})
+    util.add_effect("basic-chemistry", {type="unlock-recipe", recipe="phenol"})
   end
   data:extend({
     {
