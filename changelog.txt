@@ -3,7 +3,8 @@ Version: 0.1.1
 Date: 2022-09-01
   Changes:
     - Fix basic chem plant icon in upgrade planner, etc
-    - When coke is present, alternate phenol recipe now 12 energy instead of 15.
+    - When coke is present, alternate phenol recipe faster (15 -> 12)
+    - Formaldehyde from natural gas is very slightly faster (2 -> 1.8)
     - Minor recipe unlock tweaks
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0

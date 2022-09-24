@@ -28,7 +28,7 @@ data:extend({
     ingredients = {
       {type="fluid", name="gas", amount=10}
     },
-    energy_required = 2,
+    energy_required = 1.8,
     results = {
       {type="fluid", name="formaldehyde", amount=9}
     },
