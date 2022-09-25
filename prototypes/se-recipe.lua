@@ -1,5 +1,11 @@
 local util = require("data-util");
 
+if mods["space-exploration"] then
+  se_delivery_cannon_recipes["formaldehyde-barrel"] = {name= "formaldehyde-barrel"}
+  se_delivery_cannon_recipes["gas-barrel"] = {name= "gas-barrel"}
+  se_delivery_cannon_recipes["bakelite"] = {name= "bakelite"}
+end
+
 if util.se6() then
   data:extend({
     {
