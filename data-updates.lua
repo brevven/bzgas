@@ -9,9 +9,7 @@ require("compatibility/sciencecosttweakerm")
 
 local util = require("data-util");
 
-if util.me.use_boiler() then
-  require("gas-boiler/data-updates")
-end
+require("gas-boiler/data-updates")
 
 -- Must be last
 util.create_list()
