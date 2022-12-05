@@ -3,6 +3,8 @@ Version: 0.1.4
 Date: 2022-12-02
   Fixes:
     - Finite oil no longer produces gas when combined with some other mods
+  Changes:
+    - Add some gas to the starting area if there isn't any yet. (Can turn off in Map settings)
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 2022-10-23

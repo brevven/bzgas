@@ -32,4 +32,11 @@ data:extend({
 		setting_type = "startup",
 		default_value = true,
 	},
+
+  {
+    type = "bool-setting",
+    name = "bzgas-force-spawn",
+    setting_type = "runtime-global",
+    default_value = true,
+  },
 })
