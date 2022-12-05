@@ -11,6 +11,25 @@ function on_console_chat(event)
         player.print("Wrote recipes to script-output/"..filename)
       end
     end
+  elseif event.message and event.message == "NaturalGasRecipes" and (not event.player_index or not game.players[event.player_index] or game.players[event.player_index].admin) then
+    if game.players[event.player_index].force.recipes["bakelite"] then
+      game.players[event.player_index].force.recipes["bakelite"].enabled=true      
+    end
+    if game.players[event.player_index].force.recipes["phenol"] then
+      game.players[event.player_index].force.recipes["phenol"].enabled=true      
+    end
+    if game.players[event.player_index].force.recipes["phenol-from-oil"] then
+      game.players[event.player_index].force.recipes["phenol-from-oil"].enabled=true      
+    end
+    if game.players[event.player_index].force.recipes["basic-chemical-plant"] then
+      game.players[event.player_index].force.recipes["basic-chemical-plant"].enabled=true      
+    end
+    if game.players[event.player_index].force.recipes["formaldehyde"] then
+      game.players[event.player_index].force.recipes["formaldehyde"].enabled=true      
+    end
+    if game.players[event.player_index].force.recipes["gas-extractor"] then
+      game.players[event.player_index].force.recipes["gas-extractor"].enabled=true      
+    end
   end
 end
 script.on_event(defines.events.on_console_chat, on_console_chat)
