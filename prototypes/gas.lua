@@ -144,7 +144,7 @@ if util.me.finite() then
   data.raw.resource["gas"].infinite = false
   data.raw.resource["gas"].minimum = 20000
   data.raw.resource["gas"].normal = 80000
-  data.raw.resource["crude-oil"].minable = {
+  data.raw.resource["gas"].minable = {
     mining_time = 1,
     results = {
       {
