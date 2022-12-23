@@ -6,7 +6,7 @@ require("compatibility/ir2")
 local util = require("data-util");
 
 -- core mining balancing
-util.add_to_product("se-core-fragment-omni", "gas", -56)
+util.set_product_amount("se-core-fragment-omni", "gas", 24)
 
 -- Fix basic chemical plant fuels for K2
 if mods.Krastorio2 and 
