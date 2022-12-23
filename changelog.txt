@@ -3,6 +3,7 @@ Version: 0.1.7
 Date: 2022-12-24
   Localization:
     - Updates to ja by Sakuro
+    - zh-CN by sunnytan53
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2022-12-08
