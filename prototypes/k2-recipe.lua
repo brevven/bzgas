@@ -5,6 +5,7 @@ if mods.Krastorio2 then
       type = "recipe",
       name = "gas-reforming",
       category = "chemistry",
+      subgroup = "chemical",
       main_product = "hydrogen",
       icons = {
         {icon = kr_fluids_icons_path.."hydrogen.png", icon_size = 64, icon_mipmaps = 4},
@@ -24,6 +25,7 @@ if mods.Krastorio2 then
       type = "recipe",
       name = "formaldehyde-methanol",
       category = "chemistry",
+      subgroup = "chemical",
       main_product = "formaldehyde",
       icons = {
         {icon =  "__bzgas__/graphics/icons/formaldehyde.png", icon_size = 128, scale = 0.125},
@@ -47,6 +49,7 @@ if mods.Krastorio2 then
       type = "recipe",
       name = "methane-reforming",
       category = "chemistry",
+      subgroup = "chemical",
       main_product = "hydrogen",
       icons = {
         {icon = kr_fluids_icons_path.."hydrogen.png", icon_size = 64, icon_mipmaps = 4},

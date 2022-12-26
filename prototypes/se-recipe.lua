@@ -12,6 +12,7 @@ if util.se6() then
       type = "recipe",
       name = "methane-pre-reforming",
       category = "chemistry",
+      subgroup = "chemical",
       main_product = "se-methane-gas",
       icons = {
         {icon =  "__space-exploration-graphics__/graphics/icons/fluid/methane-gas.png", icon_size = 64},
@@ -30,6 +31,7 @@ if util.se6() then
       type = "recipe",
       name = "formaldehyde-methane",
       category = "chemistry",
+      subgroup = "chemical",
       icons = {
         {icon =  "__bzgas__/graphics/icons/formaldehyde.png", icon_size = 128, scale = 0.125},
         {icon =  "__space-exploration-graphics__/graphics/icons/fluid/methane-gas.png", icon_size = 64, scale = 0.125, shift={-8,-8}},
