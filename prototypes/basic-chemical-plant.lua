@@ -68,6 +68,7 @@ plant_e.energy_source = {
   type = "burner",
   fuel_inventory_size = 1,
   effectivity = 1,
+  emissions_per_minute = 5,
   fuel_categories = {"chemical"},
   smoke = {
     {
