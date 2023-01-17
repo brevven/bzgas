@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.8
-Date: 2022-12-28
+Date: 2022-12-29
   Changes:
+    - Move several recipes into "fluid-recipes" subgroup, so they show up in standard place in GUI.
     - Basic chem plant has pollution emissions
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.7
