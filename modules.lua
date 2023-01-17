@@ -1,6 +1,6 @@
-recipes = {"bakelite", "phenol", "phenol-from-oil"} -- formaldehyde excluded intentionally for theme
+local util = require("data-util");
 
-for i, recipe in pairs(recipes) do
+for i, recipe in pairs(util.me.recipes) do
   if data.raw.recipe[recipe] then
     for j, module in pairs(data.raw.module) do
       if module.effect then

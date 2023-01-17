@@ -6,6 +6,7 @@ require("strange-matter")
 require("compatibility/248k")
 require("compatibility/5dims")
 require("compatibility/sciencecosttweakerm")
+require("compatibility/crafting-efficiency")
 
 local util = require("data-util");
 
