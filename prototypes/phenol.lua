@@ -73,6 +73,7 @@ if data.raw.item["coke"] then
     {
       type = "recipe",
       name = "phenol-from-oil",
+      main_product = "phenol",
       category = "chemistry",
       enabled = "false",
       icons = {

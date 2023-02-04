@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+Date: 2023-02-05
+  Changes:
+    - Crafting efficiency improvements, thanks to nihilistzsche
+    - Other minor compatibility improvments
+---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 2023-01-17
   Features:
