@@ -37,8 +37,10 @@ if data.raw.item["coke"] then
         category = cat,
         main_product = "phenol",
         enabled = "false",
+        icon = "__bzgas__/graphics/icons/phenol.png", icon_size = 128,
         ingredients = {{"coal", 6}, {"wood", 6}},
         energy_required = 16,
+        subgroup = "raw-material",
         results = {
           {type="item", name="phenol", amount = 6},
           {type="item", name="coke", amount = 3},
@@ -53,8 +55,10 @@ if data.raw.item["coke"] then
         category = cat,
         main_product = "phenol",
         enabled = "false",
+		     icon = "__bzgas__/graphics/icons/phenol.png", icon_size = 128,
         ingredients = {{"coal", 4}},
         energy_required = 6.4,
+		     subgroup = "raw-material",
         results = {
           {type="item", name="phenol", amount = 2},
           {type="item", name="coke", amount = 1},
