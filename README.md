@@ -16,6 +16,9 @@ See changelog.txt
 
 - [Benjah-bmm27](https://commons.wikimedia.org/wiki/User:Benjah-bmm27) ([Formaldehyde icon](https://commons.wikimedia.org/wiki/File:Formaldehyde-3D-vdW.png), public domain)
 
+### Compatibility
+- [nihilistzsche](https://github.com/nihilistzsche)
+
 ### Localization
 
 - [RiCZrd](https://mods.factorio.com/user/RiCZrd) (cs)
