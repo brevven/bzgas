@@ -7,6 +7,7 @@ require("compatibility/248k")
 require("compatibility/5dims")
 require("compatibility/sciencecosttweakerm")
 require("compatibility/crafting-efficiency")
+require("compatibility/bobe")
 
 local util = require("data-util");
 

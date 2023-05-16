@@ -56,6 +56,7 @@ end
 
 -- Should come as late as possible, doesn't need to be last
 require("compatibility/electronic-circuit")
+require("compatibility/bobe-ff")  -- final updates for bob's electronics
 
 -- Must be last
 util.create_list()
