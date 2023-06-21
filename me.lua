@@ -5,7 +5,11 @@ me.list = {}
 me.recipes = {"bakelite", "phenol", "phenol-from-oil"} -- formaldehyde excluded intentionally for theme
 
 function me.finite()   -- Krastorio 2
-  return me.get_setting("kr-finite-oil")
+  if mods.Krastorio2 then
+    return me.get_setting("kr-finite-oil")
+  else
+    return me.get_setting("bzgas-finite")
+  end
 end
 
 function me.handcraft() 

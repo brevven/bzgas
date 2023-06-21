@@ -40,3 +40,14 @@ data:extend({
     default_value = true,
   },
 })
+
+if not mods.Krastorio2 then
+  data:extend({
+    {
+      type = "bool-setting",
+      name = "bzgas-finite",
+      setting_type = "startup",
+      default_value = false
+    }
+  })
+end
