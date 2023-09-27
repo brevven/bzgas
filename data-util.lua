@@ -1304,6 +1304,7 @@ function util.replace_ingredients_prior_to(tech, old, new, multiplier)
     if (recipe.enabled and recipe.enabled ~= 'false')
       and (not recipe.hidden or recipe.hidden == 'true') -- probably don't want to change hidden recipes
       and string.sub(recipe.name, 1, 3) ~= 'se-' -- have to exlude SE in general :(
+      and string.sub(recipe.name, 1, 3) ~= 'ic-' -- do not replace intermodal container packing recipes
     then
       -- log("BZZZ due to 'enabled' replacing " .. old .. " with " .. new .." in " .. recipe.name) -- Handy Debug :|
       util.replace_ingredient(recipe.name, old, new, multiplier, true)
