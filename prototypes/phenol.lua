@@ -73,6 +73,12 @@ if data.raw.item["coke"] then
   else
     util.add_effect("basic-chemistry", {type="unlock-recipe", recipe="phenol"})
   end
+
+  if mods.Krastorio2 then
+    light_oil_icon = { icon = "__Krastorio2Assets__/icons/fluids/light-oil.png", icon_size = 64, icon_mipmaps = 4, scale=0.25, shift={-8,-8}}
+  else
+    light_oil_icon = { icon = "__base__/graphics/icons/fluid/light-oil.png", icon_size = 64, icon_mipmaps = 4, scale=0.25, shift={-8,-8}}
+  end
   data:extend({
     {
       type = "recipe",
@@ -82,7 +88,7 @@ if data.raw.item["coke"] then
       enabled = "false",
       icons = {
         {icon = "__bzgas__/graphics/icons/phenol.png", icon_size = 128},
-        {icon = "__base__/graphics/icons/fluid/light-oil.png", icon_size = 64, icon_mipmaps = 4, scale=0.25, shift={-8,-8}},
+        light_oil_icon,
       },
       ingredients = {
         {type="fluid", name="light-oil", amount=20}
