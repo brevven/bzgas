@@ -132,7 +132,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     fuel_value = "1000KJ",
-    emissions_multiplier = 0.75,
+    emissions_multiplier = util.se6() and 1.1 or 0.75,
     base_color = {r=0.67, g=0.87, b=0.77},
     flow_color = {r=0.67, g=0.87, b=0.87},
     icon =  "__bzgas__/graphics/icons/gas.png",

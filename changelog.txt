@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.13
+Date: 2024-01-13
+  Changes:
+    - SE: Natural gas has pollution value of 1.1 (up from 0.75) to balance between pure methane
+      and petroleum gas.
+  Localization:
+    - Add pl, thanks to S3BA
+---------------------------------------------------------------------------------------------------
 Version: 0.1.12
 Date: 2023-12-24
   Features:
