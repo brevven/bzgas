@@ -19,6 +19,18 @@ elseif data.raw.item["silica"] and data.raw.technology["silica-processing"] then
   ge_prereq = {"silica-processing"}
 end
 
+drilling_rig_circuit_connector_definitions = circuit_connector_definitions.create
+(
+  universal_connector_template,
+  {
+    { variation = 26, main_offset = futil.by_pixel(32, -3), shadow_offset = futil.by_pixel(32, -3), show_shadow = true },
+    { variation = 26, main_offset = futil.by_pixel(32, -3), shadow_offset = futil.by_pixel(32, -3), show_shadow = true },
+    { variation = 26, main_offset = futil.by_pixel(32, -3), shadow_offset = futil.by_pixel(32, -3), show_shadow = true },
+    { variation = 26, main_offset = futil.by_pixel(32, -3), shadow_offset = futil.by_pixel(32, -3), show_shadow = true }
+  }
+)
+
+
 data:extend({
   {
     type = "item",
@@ -183,8 +195,8 @@ data:extend({
     },
     fast_replaceable_group = "pumpjack",
 
-    -- circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-    -- circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
-    -- circuit_wire_max_distance = default_circuit_wire_max_distance
+    circuit_wire_connection_points = drilling_rig_circuit_connector_definitions.points,
+    circuit_connector_sprites = drilling_rig_circuit_connector_definitions.sprites,
+    circuit_wire_max_distance = default_circuit_wire_max_distance
   }
 })
