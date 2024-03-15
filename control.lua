@@ -48,3 +48,5 @@ function on_init()
   global.starting_spawn = true
 end
 script.on_init(on_init)
+
+util.warptorio2_expansion_helper()

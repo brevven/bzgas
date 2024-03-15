@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.16
+Date: 2024-02-10
+  Fixes:
+    - Fix some printspam.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.15
+Date: 2024-02-10
+  Changes:
+    - Compatibility fix for Warptorio Expansion to prevent soft lock when used without Aluminum
+      Note, 0.1.14 deprecated due to possible re-soft-locking bug
+---------------------------------------------------------------------------------------------------
 Version: 0.1.13
 Date: 2024-01-13
   Changes:
